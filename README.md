@@ -24,5 +24,6 @@ SELECT * FROM `degrees` WHERE `level`= 'magistrale';
 Da quanti dipartimenti è composta l'università? (12)
 SELECT * FROM `departments`;
 
-
+Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+SELECT * FROM `teachers` WHERE `phone` IS NULL;
 
