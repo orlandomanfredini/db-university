@@ -27,3 +27,6 @@ ON `degrees`.`id` = `courses`.`degree_id`
 INNER JOIN `course_teacher`
 ON `courses`.`id` = `course_teacher`.`course_id`
 WHERE `departments`.`name` = 'Dipartimento di Matematica';
+
+<!-- CORRETTO -->
+SELECT DISTINCT `teachers`.`name`, `teachers`.`id` `id_prof`, `departments`.`id`, `departments`.`name` FROM `teachers` INNER JOIN `course_teacher` ON `teachers`.`id`=`course_teacher`.`teacher_id` INNER JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id` INNER JOIN `degrees` ON `courses`.`degree_id` = `degrees`.`id` INNER JOIN `departments` ON `degrees`.`department_id` = `departments`.`id` WHERE `departments`.`name` = "Dipartimento di Matematica";
