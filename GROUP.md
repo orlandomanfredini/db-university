@@ -10,3 +10,6 @@ FROM `exam_student`
 INNER JOIN `exams`
 ON `exam_student`.`exam_id`= `exams`.`id`
 GROUP BY `exam_id`;
+
+Contare quanti corsi di laurea ci sono per ogni dipartimento
+SELECT COUNT(*) `tot_corsi`, `department_id` FROM `degrees` GROUP BY `department_id`;
